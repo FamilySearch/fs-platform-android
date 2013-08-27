@@ -1,0 +1,6 @@
+*.ipr
+*.iml
+*.iws
+.idea
+target
+gen
