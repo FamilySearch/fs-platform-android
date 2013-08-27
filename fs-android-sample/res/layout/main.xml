@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:longClickable="true">
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Please login to FamilySearch"
+      />
+  <Button android:id="@+id/btnLogin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="Login"
+          android:layout_gravity="center" android:onClick="login"
+      />
+  <TextView android:id="@+id/login_person_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+      />
+  <TextView android:id="@+id/login_session_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+      />
+</LinearLayout>
+

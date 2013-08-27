@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:longClickable="true">
+  <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Please login to FamilySearch"/>
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:layout_gravity="left|center_vertical"/>
+    <EditText android:id="@+id/userName"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="api-user-3391"
+              android:selectAllOnFocus="true"/>
+  </LinearLayout>
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Password"
+              android:layout_gravity="left|center_vertical"/>
+    <EditText android:id="@+id/password"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:selectAllOnFocus="true"
+              android:text="1d2d"
+              android:password="true"/>
+  </LinearLayout>
+  <Button android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Login"
+          android:onClick="login"/>
+</LinearLayout>
+
