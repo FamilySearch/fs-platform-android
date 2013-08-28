@@ -18,3 +18,6 @@ Build
 The maven pom files are not yet operational. 
 
 The only way to use this is to add the fs-android directory as an Android library project inside Eclipse or Intellij.
+
+For intellij users, you can copy the *.iml.intellij files to *.iml so you can easily import the module into an existing intellij project. We do not want to add the .iml to git so each developer can use their own intellij settings.
+
