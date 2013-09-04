@@ -18,10 +18,10 @@ public class ChangeInfo
 {
   @Element (required = false)
   private URI operation;
-  @Attribute (required = false) // @XmlQNameEnumRef(ChangeOperation.class)
-  private transient URI objectType;
-  @Attribute (required = false) // @XmlQNameEnumRef(ChangeObjectModifier.class)
-  private URI objectModifier;
+  @Attribute (required = false)
+  private transient URI objectType; // from ChangeOperation
+  @Attribute (required = false)
+  private URI objectModifier; // from ChangeObjectModifier
   @Attribute (required = false)
   private String reason;
   @Element (required = false)
@@ -80,11 +80,10 @@ public class ChangeInfo
   }
 
   /**
-   * The type of the object to which the operation applies.
+   * The type of the object to which the operation applies. Values from ChangeObjectType
    *
    * @return The type of the object to which the operation applies.
    */
-//  // @XmlQNameEnumRef(ChangeObjectType.class)
   public URI getObjectType() {
     return objectType;
   }

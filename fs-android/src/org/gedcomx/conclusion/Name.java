@@ -32,9 +32,8 @@ import java.util.List;
 @Root ( strict = false )
 public class Name extends Conclusion
 {
-
-  @Attribute ( required = false )  // @XmlQNameEnumRef (NameType.class)
-  private URI type;
+  @Attribute ( required = false )
+  private URI type; // from NameType
   @Element ( required = false )
   private Date date;
   @ElementList ( entry = "nameForm", inline = true )

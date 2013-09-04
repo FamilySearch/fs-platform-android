@@ -30,11 +30,10 @@ import org.simpleframework.xml.Order;
 @Order (elements = {"person", "details"})
 public class EventRole extends Conclusion
 {
-
   @Element (required = false)
   private ResourceReference person;
-  @Attribute  // @XmlQNameEnumRef (EventRoleType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from EventRoleType
   @Element (required = false)
   private String details;
 

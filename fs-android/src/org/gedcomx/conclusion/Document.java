@@ -32,14 +32,13 @@ import org.simpleframework.xml.Root;
 @Order (elements = {"text"})
 public class Document extends Conclusion implements HasText, Attributable
 {
-
   public static final String TEXT_TYPE_PLAIN = "plain";
   public static final String TEXT_TYPE_XHTML = "xhtml";
 
   @Attribute (required = false)
   private Boolean extracted;
-  @Attribute  // @XmlQNameEnumRef (DocumentType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from DocumentType
   @Attribute (required = false)
   private String textType;
   @Element (required = false)

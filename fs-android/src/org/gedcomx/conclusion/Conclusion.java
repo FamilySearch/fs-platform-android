@@ -35,12 +35,10 @@ import java.util.List;
 @Order (elements = {"attribution", "source", "analysis", "note"})
 public abstract class Conclusion extends HypermediaEnabledData implements Attributable, ReferencesSources, HasNotes
 {
-
   @Attribute (required = false)
   private String lang;
   @Attribute (required = false)
-//  // @XmlQNameEnumRef(ConfidenceLevel.class)
-  private URI confidence;
+  private URI confidence; // from ConfidenceLevel
   @ElementList (entry = "source", inline = true, required = false)
   private List<SourceReference> sources;
   @ElementList (entry = "note", inline = true, required = false)

@@ -32,12 +32,11 @@ import java.util.List;
 //@XmlType (name = "FieldValue")
 public final class FieldValue extends Conclusion implements HasFieldBasedEvidence
 {
-
   /**
    * @see FieldValueType
    */
-  @Attribute   // @XmlQNameEnumRef (FieldValueType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from FieldValueType
   @Element
   private String text;
   @Element (required = false)

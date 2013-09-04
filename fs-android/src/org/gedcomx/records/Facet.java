@@ -30,9 +30,8 @@ import java.util.List;
 @Order (elements = {"title", "key", "facets", "values"})
 public class Facet extends HypermediaEnabledData
 {
-
-  @Attribute  // @XmlQNameEnumRef ( FacetType.class )
-  private URI type;
+  @Attribute
+  private URI type; // from FacetType
   private String title;
   private String key;
   @ElementList (entry = "facet")

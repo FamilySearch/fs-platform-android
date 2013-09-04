@@ -29,12 +29,11 @@ import org.simpleframework.xml.Text;
 //@XmlType ( name = "Identifier" )
 public final class Identifier
 {
-
   private transient boolean hasUniqueKey = false;
   @Text
   private URI value;
-  @Attribute  // @XmlQNameEnumRef (IdentifierType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from IdentifierType
 
   public Identifier() {
   }

@@ -36,9 +36,8 @@ import java.util.List;
 @Order (elements = {"person1", "person2", "fact", "fieldValue"})
 public class Relationship extends Subject implements HasFacts, HasFieldBasedEvidence
 {
-
-  @Attribute  // @XmlQNameEnumRef (RelationshipType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from RelationshipType
   @Element (required = false)
   private ResourceReference person1;
   @Element (required = false)

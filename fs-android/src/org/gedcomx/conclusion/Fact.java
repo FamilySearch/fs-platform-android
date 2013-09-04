@@ -32,9 +32,8 @@ import java.util.List;
 @Root ( strict = false )
 public class Fact extends Conclusion implements HasDateAndPlace, HasFieldBasedEvidence
 {
-
-  @Attribute  // @XmlQNameEnumRef (FactType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from FactType
   @Element ( required = false )
   private Date date;
   @Element ( required = false )

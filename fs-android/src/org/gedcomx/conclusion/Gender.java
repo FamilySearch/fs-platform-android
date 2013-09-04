@@ -34,9 +34,8 @@ import java.util.List;
 @Root ( strict = false )
 public class Gender extends Conclusion implements HasFieldBasedEvidence
 {
-
-  @Attribute  // @XmlQNameEnumRef (GenderType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from GenderType
   @ElementList ( entry = "fieldValue", inline = true, required = false )
   private List<EvidenceReference> fieldValueReferences;
 

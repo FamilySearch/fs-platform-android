@@ -35,7 +35,6 @@ import java.util.List;
 @Order (elements = {"citations", "mediator", "sources", "analysis", "componentOf", "titles", "notes", "attribution", "sortKey", "description", "identifiers", "created", "modified", "coverage", "repository", "descriptorRef"})
 public class SourceDescription extends HypermediaEnabledData implements Attributable, HasNotes, ReferencesSources
 {
-
   @ElementList (entry = "citation", inline = true, required = false)
   private List<SourceCitation> citations;
   @Attribute (required = false)
@@ -56,8 +55,8 @@ public class SourceDescription extends HypermediaEnabledData implements Attribut
   private List<Note> notes;
   @Element (required = false)
   private Attribution attribution;
-  @Attribute (required = false)  // @XmlQNameEnumRef (ResourceType.class)
-  private URI resourceType;
+  @Attribute (required = false)
+  private URI resourceType; // from ResourceType
   @Element (required = false)
   private String sortKey;
   @ElementList (entry = "description", inline = true, required = false)

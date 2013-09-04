@@ -29,11 +29,10 @@ import java.util.List;
 @Order (elements = {"label", "values"})
 public class Field extends HypermediaEnabledData
 {
-
   @Element
   private String label;
-  @Attribute   // @XmlQNameEnumRef ( FieldType.class )
-  private URI type;
+  @Attribute
+  private URI type; // from FieldType
   @ElementList (entry = "value")
   private List<FieldValue> values;
 

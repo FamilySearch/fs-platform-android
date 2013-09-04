@@ -32,9 +32,8 @@ import java.util.List;
 @Order (elements = {"date", "place", "role"})
 public class Event extends Subject implements HasDateAndPlace
 {
-
-  @Attribute  // @XmlQNameEnumRef (org.gedcomx.types.EventType.class)
-  private URI type;
+  @Attribute
+  private URI type; // from org.gedcomx.types.EventType
   @Element (required = false)
   private Date date;
   @Element (required = false)
