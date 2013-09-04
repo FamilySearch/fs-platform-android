@@ -23,7 +23,7 @@ import org.simpleframework.xml.Namespace;
 
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 @SuppressWarnings ("gedcomx:no_id")
 public final class Content

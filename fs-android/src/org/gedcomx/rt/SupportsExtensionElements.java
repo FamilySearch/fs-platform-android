@@ -18,7 +18,7 @@ package org.gedcomx.rt;
 import java.util.List;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 public interface SupportsExtensionElements
 {

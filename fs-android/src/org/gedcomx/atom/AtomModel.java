@@ -16,7 +16,7 @@
 package org.gedcomx.atom;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 public class AtomModel
 {

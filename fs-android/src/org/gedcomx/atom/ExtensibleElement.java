@@ -22,7 +22,7 @@ import org.simpleframework.xml.ElementList;
 import java.util.*;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 //@XmlType ( name = "ExtensibleElement" )
 public abstract class ExtensibleElement extends CommonAttributes implements SupportsExtensionElements, HasTransientProperties

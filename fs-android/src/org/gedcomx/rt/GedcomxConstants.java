@@ -16,7 +16,7 @@
 package org.gedcomx.rt;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 public class GedcomxConstants
 {

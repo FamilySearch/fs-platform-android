@@ -19,7 +19,7 @@ import javax.xml.namespace.QName;
 import java.util.Map;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 public interface SupportsExtensionAttributes
 {
