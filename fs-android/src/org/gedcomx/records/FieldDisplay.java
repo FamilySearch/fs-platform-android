@@ -27,7 +27,7 @@ import org.simpleframework.xml.Order;
 public class FieldDisplay
 {
 
-  @Attribute // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute
   private String lang;
   private String originalValueLabel;
   private String interpretedValueLabel;

@@ -19,7 +19,6 @@ import org.gedcomx.common.URI;
 import org.gedcomx.links.Link;
 import org.gedcomx.links.SupportsLinks;
 import org.gedcomx.rt.GedcomxConstants;
-import org.gedcomx.search.ResultConfidence;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Namespace;
@@ -34,7 +33,7 @@ import java.util.Map;
 /**
  * The "atom:entry" element represents an individual entry, acting as a container for metadata and data associated with the entry.
  *
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 @Root (strict = false)
 @SuppressWarnings ("gedcomx:no_id")
@@ -49,15 +48,14 @@ public class Entry extends ExtensibleElement implements SupportsLinks
   private Content content;
   @ElementList (entry = "contributor", inline = true, required = false)
   private List<Person> contributors;
-  //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   @Element (required = false)
   private URI id;
   @Element (required = false)
   @Namespace (reference = GedcomxConstants.GEDCOMX_NAMESPACE)
   private Float score;
-  @Element (required = false) // ( namespace = GedcomxConstants.GEDCOMX_NAMESPACE )
+  @Element (required = false)
   @Namespace (reference = GedcomxConstants.GEDCOMX_NAMESPACE)
-  private ResultConfidence confidence;
+  private int confidence;
   @ElementList (entry = "link", inline = true, required = false)
   private List<Link> links;
   @Element (required = false)
@@ -184,7 +182,7 @@ public class Entry extends ExtensibleElement implements SupportsLinks
    *
    * @return The confidence of the result, if this entry represents a search result.
    */
-  public ResultConfidence getConfidence() {
+  public int getConfidence() {
     return confidence;
   }
 
@@ -193,7 +191,7 @@ public class Entry extends ExtensibleElement implements SupportsLinks
    *
    * @param confidence The confidence of the result, if this entry represents a search result.
    */
-  public void setConfidence( ResultConfidence confidence ) {
+  public void setConfidence( int confidence ) {
     this.confidence = confidence;
   }
 

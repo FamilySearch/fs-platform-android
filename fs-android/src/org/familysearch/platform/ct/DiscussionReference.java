@@ -14,7 +14,7 @@ import org.simpleframework.xml.Root;
 public final class DiscussionReference extends HypermediaEnabledData
 {
 
-  @Attribute //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
+  @Attribute
   private URI resource;
 
   public DiscussionReference() {

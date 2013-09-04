@@ -30,7 +30,6 @@ public final class EvidenceReference extends HypermediaEnabledData implements At
 {
 
   @Attribute
-//  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   private URI resource;
   @Attribute
   private String resourceId;

@@ -22,19 +22,17 @@ import org.simpleframework.xml.Text;
 /**
  * identifies the agent used to generate a feed, for debugging and other purposes.
  *
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  * @see <a href="http://tools.ietf.org/html/rfc4287#section-4.2.4">The atom spec, section 4.2.4.</a>
  */
 public final class Generator
 {
 
-  @Attribute (required = false) // ( namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Attribute (required = false)
-//  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   private URI base;
   @Attribute
-//  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   private URI uri;
   @Attribute (required = false)
   private String version;

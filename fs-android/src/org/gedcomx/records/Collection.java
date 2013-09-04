@@ -32,7 +32,7 @@ import java.util.List;
 public class Collection extends HypermediaEnabledData implements Attributable
 {
 
-  @Attribute (required = false) //( namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   private List<CollectionContent> content; //todo: let's just use facets for this...
   @Element (required = false)

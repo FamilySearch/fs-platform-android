@@ -30,7 +30,7 @@ import java.util.List;
 public class RecordDescriptor extends HypermediaEnabledData
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @ElementList (entry = "field")
   private List<FieldDescriptor> fields;

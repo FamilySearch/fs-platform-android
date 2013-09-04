@@ -32,7 +32,7 @@ import org.simpleframework.xml.Root;
 public class Note extends HypermediaEnabledData implements Attributable, HasText
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Element (required = false)
   private String subject;

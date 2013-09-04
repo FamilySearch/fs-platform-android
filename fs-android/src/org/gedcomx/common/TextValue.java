@@ -26,7 +26,7 @@ import org.simpleframework.xml.Text;
 public class TextValue
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Text
   private String value;

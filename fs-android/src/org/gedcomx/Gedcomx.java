@@ -48,7 +48,7 @@ import java.util.List;
 public class Gedcomx extends HypermediaEnabledData
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Attribute (name = "description", required = false)
   private URI descriptionRef;

@@ -19,15 +19,15 @@ import org.gedcomx.common.URI;
 import org.simpleframework.xml.Attribute;
 
 /**
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 //@XmlType ( name = "CommonAttributes" )
 public abstract class CommonAttributes
 {
 
-  @Attribute (required = false) //( namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
-  @Attribute (required = false)  //  @XmlSchemaType (name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI)
+  @Attribute (required = false)
   private URI base;
 
   /**

@@ -45,7 +45,7 @@ public class Link
 
   @Attribute ( required = false )
   private String rel;
-  @Attribute ( required = false ) //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
+  @Attribute ( required = false )
   private URI href;
   @Attribute ( required = false )
   private String template;

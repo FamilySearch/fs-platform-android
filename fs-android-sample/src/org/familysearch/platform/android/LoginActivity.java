@@ -98,6 +98,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
       }
       else {
         Toast.makeText(this, "Failed to login (" + code + "). Check your internet settings.", Toast.LENGTH_LONG).show();
+        setResult( Activity.RESULT_CANCELED, null );
       }
     }
   }

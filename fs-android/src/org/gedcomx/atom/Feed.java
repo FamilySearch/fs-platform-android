@@ -22,7 +22,6 @@ import org.gedcomx.records.Facet;
 import org.gedcomx.rt.GedcomxConstants;
 import org.simpleframework.xml.*;
 
-import javax.xml.XMLConstants;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -32,7 +31,7 @@ import java.util.List;
  * <a href="http://tools.ietf.org/html/rfc4287#section-4">RFC 4287</a>. The JSON media type is specific to GEDCOM X and is a
  * translation to JSON from the XML.</p>
  *
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  */
 
 @Root (strict = false)
@@ -45,22 +44,18 @@ public class Feed extends ExtensibleElement implements SupportsLinks
   private List<Person> contributors;
   @Element (required = false)
   private Generator generator;
-  //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   @Element (required = false)
   private URI icon;
-  //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   @Element (required = false)
   private URI id;
-  @Element (required = false) // ( namespace = GedcomxConstants.GEDCOMX_NAMESPACE )
+  @Element (required = false)
   @Namespace (reference = GedcomxConstants.GEDCOMX_NAMESPACE)
   private Integer results;
-  @Element (required = false) // ( namespace = GedcomxConstants.GEDCOMX_NAMESPACE )
+  @Element (required = false)
   @Namespace (reference = GedcomxConstants.GEDCOMX_NAMESPACE)
   private Integer index;
   @ElementList (entry = "link", inline = true, required = false)
   private List<Link> links;
-  //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
-  @Namespace (prefix = "anyURI", reference = XMLConstants.W3C_XML_SCHEMA_NS_URI)
   @Element (required = false)
   private URI logo;
   @Element (required = false)

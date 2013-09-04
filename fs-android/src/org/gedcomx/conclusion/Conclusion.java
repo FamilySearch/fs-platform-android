@@ -36,7 +36,7 @@ import java.util.List;
 public abstract class Conclusion extends HypermediaEnabledData implements Attributable, ReferencesSources, HasNotes
 {
 
-  @Attribute (required = false) //( namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Attribute (required = false)
 //  // @XmlQNameEnumRef(ConfidenceLevel.class)

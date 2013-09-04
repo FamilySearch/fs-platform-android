@@ -31,7 +31,7 @@ import java.util.List;
 public class RecordSet extends HypermediaEnabledData
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Element (required = false)
   private Gedcomx metadata;

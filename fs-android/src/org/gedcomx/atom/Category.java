@@ -21,7 +21,7 @@ import org.simpleframework.xml.Attribute;
 /**
  * conveys information about a category associated with an entry or feed.
  *
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  * @see <a href="http://tools.ietf.org/html/rfc4287#section-4.2.2">The atom spec, section 4.2.2.</a>
  */
 //@XmlType ( name = "Category" )
@@ -30,7 +30,7 @@ public final class Category extends CommonAttributes
 
   @Attribute (required = false)
   private String term;
-  @Attribute (required = false) //  @XmlSchemaType (name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI)
+  @Attribute (required = false)
   private URI scheme;
   @Attribute (required = false)
   private String label;

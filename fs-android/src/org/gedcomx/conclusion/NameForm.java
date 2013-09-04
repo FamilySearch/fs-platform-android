@@ -35,7 +35,7 @@ import java.util.List;
 public class NameForm extends ExtensibleData implements HasFieldBasedEvidence
 {
 
-  @Attribute (required = false) // (namespace = XMLConstants.XML_NS_URI )
+  @Attribute (required = false)
   private String lang;
   @Element (required = false)
   private String fullText;

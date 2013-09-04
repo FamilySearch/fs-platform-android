@@ -40,7 +40,7 @@ public class SourceDescription extends HypermediaEnabledData implements Attribut
   private List<SourceCitation> citations;
   @Attribute (required = false)
   private String mediaType;
-  @Attribute //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
+  @Attribute
   private URI about;
   @Element (required = false)
   private ResourceReference mediator;

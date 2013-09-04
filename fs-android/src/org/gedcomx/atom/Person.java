@@ -23,7 +23,7 @@ import org.simpleframework.xml.Root;
 /**
  * A Person construct is an element that describes a person, corporation, or similar entity
  *
- * @author Ryan Heaton
+ * @author Reed Ellsworth
  * @see <a href="http://tools.ietf.org/html/rfc4287#section-3.2">The atom spec, section 3.2.</a>
  */
 @Root (strict = false)
@@ -33,7 +33,6 @@ public final class Person extends ExtensibleElement
 
   @Element (required = false)
   private String name;
-  //  @XmlSchemaType ( name = "anyURI", namespace = XMLConstants.W3C_XML_SCHEMA_NS_URI )
   @Element (required = false)
   private URI uri;
   @Element (required = false)
