@@ -22,6 +22,7 @@ public class MainActivity extends Activity implements LoaderManager.LoaderCallba
   private static final int LOGIN_REQUEST = 1;
   private static final int LOADER_CURRENT_PERSON = 0x2;
   private static final String platformPath = "https://sandbox.familysearch.org/platform/";
+  static String identitySandboxPath = "https://sandbox.familysearch.org/identity/v2/login";
 
   private String sessionId = null;
 
@@ -32,7 +33,11 @@ public class MainActivity extends Activity implements LoaderManager.LoaderCallba
   }
 
   public void login(View v) {
-    startActivityForResult( new Intent( this, LoginActivity.class ), LOGIN_REQUEST );
+    Intent intent = new Intent( this, LoginActivity.class );
+    // todo: substitute the following key with your own dev key - see https://familysearch.org/developers/docs/guides/getting-started
+    intent.putExtra( LoginActivity.DEV_KEY, "WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK" ); // sample key only for sandbox.familysearch.org
+    intent.putExtra( LoginActivity.IDENTITY_URL, identitySandboxPath );
+    startActivityForResult( intent, LOGIN_REQUEST );
   }
 
   @Override

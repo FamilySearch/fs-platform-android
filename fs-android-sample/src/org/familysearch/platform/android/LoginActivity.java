@@ -18,11 +18,6 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
 /**
- * A simple ListActivity that display Tweets that contain the word
- * Android in them.
- *
- * @author Neil Goodman
- *
  */
 public class LoginActivity extends Activity implements LoaderManager.LoaderCallbacks<RESTResponse>
 {
@@ -31,6 +26,8 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
   static String identityProdPath = "https://api.familysearch.org/identity/v2/login";
   static String identitySandboxPath = "https://sandbox.familysearch.org/identity/v2/login";
   static final String SESSION_ID = "sessionid";
+  public static final String DEV_KEY = "LoginActivity.DEV_KEY";
+  public static final String IDENTITY_URL = "LoginActivity.IDENTITY_URL";
 
   private static String getLoginPath() {
     return identitySandboxPath;
@@ -40,6 +37,12 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView( R.layout.login );
+
+    // the following should not be used in a real app. But this is convenient for sample purposes
+    EditText txtUserName = (EditText) findViewById( R.id.userName );
+    EditText txtPassword = (EditText) findViewById( R.id.password );
+    txtUserName.setText( "api-user-3480" );
+    txtPassword.setText( "20cf" );
   }
 
   public void login(View v) {
@@ -50,8 +53,16 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
   private void doLogin( String username, String password ) {
 
-    Uri uri = Uri.parse(getLoginPath());
-    String devKey = "WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK"; // diamondedge sandbox
+    String devKey = (String) getIntent().getSerializableExtra( DEV_KEY );
+    if (devKey == null || devKey.length() == 0) {
+      Toast.makeText(this, "Dev Key not set.", Toast.LENGTH_LONG).show();
+      return;
+    }
+    String identityUrl = (String) getIntent().getSerializableExtra( IDENTITY_URL );
+    if (identityUrl == null || identityUrl.length() == 0) {
+      identityUrl = identityProdPath;
+    }
+    Uri uri = Uri.parse(identityUrl);
 
     Bundle params = new Bundle();
     params.putString("key", devKey);

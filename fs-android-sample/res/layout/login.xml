@@ -18,7 +18,6 @@
     <EditText android:id="@+id/userName"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:text="api-user-3391"
               android:selectAllOnFocus="true"/>
   </LinearLayout>
   <LinearLayout android:orientation="horizontal"
@@ -32,7 +31,6 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:selectAllOnFocus="true"
-              android:text="1d2d"
               android:password="true"/>
   </LinearLayout>
   <Button android:layout_width="wrap_content"
