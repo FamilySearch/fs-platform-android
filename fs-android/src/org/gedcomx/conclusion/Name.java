@@ -16,6 +16,7 @@
 package org.gedcomx.conclusion;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.NameType;
 import org.simpleframework.xml.*;
 
@@ -74,7 +75,7 @@ public class Name extends Conclusion
    * @param knownType The known type.
    */
   public void setKnownType( NameType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

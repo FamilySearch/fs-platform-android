@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 import java.util.Collections;
 import java.util.EnumSet;
@@ -469,7 +470,7 @@ public enum FactType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -479,7 +480,7 @@ public enum FactType
    * @return The enumeration.
    */
   public static FactType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), FactType.class);
+    return EnumUtil.fromURIValue( qname.toString(), FactType.class );
   }
 
   /**

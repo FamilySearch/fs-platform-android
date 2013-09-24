@@ -22,6 +22,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Root;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -176,5 +177,10 @@ public class Discussion extends HypermediaEnabledData
     this.comments = comments;
   }
 
-
+  public void addComment(Comment comment) {
+    if (comments == null) {
+      comments = new ArrayList<Comment>();
+    }
+    comments.add( comment );
+  }
 }

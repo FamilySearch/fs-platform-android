@@ -5,6 +5,7 @@ package org.familysearch.platform.ct;
 
 import org.gedcomx.common.ResourceReference;
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
@@ -76,7 +77,7 @@ public class ChangeInfo
    * @param knownOperation the change operation.
    */
   public void setKnownOperation( ChangeOperation knownOperation ) {
-//    setOperation(knownOperation == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownOperation)));
+    setOperation(knownOperation == null ? null : URI.create( EnumUtil.toURIValue( knownOperation )));
   }
 
   /**
@@ -113,7 +114,7 @@ public class ChangeInfo
    * @param knownObject the change object.
    */
   public void setKnownObjectType( ChangeObjectType knownObject ) {
-//    setObjectType(knownObject == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownObject)));
+    setObjectType(knownObject == null ? null : URI.create( EnumUtil.toURIValue( knownObject )));
   }
 
   /**
@@ -151,7 +152,7 @@ public class ChangeInfo
    * @param knownObject the change object.
    */
   public void setKnownObjectModifier( ChangeObjectModifier knownObject ) {
-//    setObjectModifier(knownObject == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownObject)));
+    setObjectModifier(knownObject == null ? null : URI.create( EnumUtil.toURIValue( knownObject )));
   }
 
   /**

@@ -17,6 +17,7 @@ package org.gedcomx.conclusion;
 
 import org.gedcomx.common.*;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.source.ReferencesSources;
 import org.gedcomx.source.SourceReference;
 import org.gedcomx.types.ConfidenceLevel;
@@ -99,7 +100,7 @@ public abstract class Conclusion extends HypermediaEnabledData implements Attrib
    * @param level The known level.
    */
   public void setKnownConfidenceLevel( ConfidenceLevel level ) {
-//    setConfidence(level == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(level)));
+    setConfidence(level == null ? null : URI.create( EnumUtil.toURIValue( level )));
   }
 
   /**

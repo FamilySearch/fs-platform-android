@@ -17,6 +17,7 @@ package org.gedcomx.records;
 
 import org.gedcomx.common.URI;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.ResourceType;
 import org.simpleframework.xml.Root;
 
@@ -66,7 +67,7 @@ public class CollectionContent extends HypermediaEnabledData
    * @param type The type of resource being covered in this collection.
    */
   public void setKnownResourceType( ResourceType type ) {
-//    setResourceType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setResourceType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
   /**

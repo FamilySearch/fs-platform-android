@@ -18,6 +18,7 @@ package org.gedcomx.conclusion;
 import org.gedcomx.common.Attributable;
 import org.gedcomx.common.HasText;
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.DocumentType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -131,7 +132,7 @@ public class Document extends Conclusion implements HasText, Attributable
    * @param knownType the document type.
    */
   public void setKnownType( org.gedcomx.types.DocumentType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

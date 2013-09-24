@@ -17,6 +17,7 @@ package org.gedcomx.conclusion;
 
 import org.gedcomx.common.ResourceReference;
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.EventRoleType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -88,7 +89,7 @@ public class EventRole extends Conclusion
    * @param knownType The role type.
    */
   public void setKnownType( EventRoleType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

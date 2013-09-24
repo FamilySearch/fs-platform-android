@@ -18,6 +18,7 @@ package org.gedcomx.source;
 import org.gedcomx.common.*;
 import org.gedcomx.conclusion.Identifier;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.IdentifierType;
 import org.gedcomx.types.ResourceType;
 import org.simpleframework.xml.*;
@@ -107,7 +108,7 @@ public class SourceDescription extends HypermediaEnabledData implements Attribut
    * @param type The type of the resource being described.
    */
   public void setKnownType( ResourceType type ) {
-//    setResourceType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setResourceType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
   /**

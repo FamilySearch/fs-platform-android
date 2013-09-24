@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of levels of confidence.
@@ -54,7 +55,7 @@ public enum ConfidenceLevel
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -64,7 +65,7 @@ public enum ConfidenceLevel
    * @return The enumeration.
    */
   public static ConfidenceLevel fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), ConfidenceLevel.class);
+    return EnumUtil.fromURIValue( qname.toString(), ConfidenceLevel.class );
   }
 
 }

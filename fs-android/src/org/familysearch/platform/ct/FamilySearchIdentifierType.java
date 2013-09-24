@@ -1,6 +1,7 @@
 package org.familysearch.platform.ct;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of FamilySearch-specific identifier types.
@@ -27,7 +28,7 @@ public enum FamilySearchIdentifierType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -37,6 +38,6 @@ public enum FamilySearchIdentifierType
    * @return The enumeration.
    */
   public static FamilySearchIdentifierType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), FamilySearchIdentifierType.class);
+    return EnumUtil.fromURIValue( qname.toString(), FamilySearchIdentifierType.class );
   }
 }

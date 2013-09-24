@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of document types.
@@ -59,7 +60,7 @@ public enum DocumentType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -69,7 +70,7 @@ public enum DocumentType
    * @return The enumeration.
    */
   public static DocumentType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), DocumentType.class);
+    return EnumUtil.fromURIValue( qname.toString(), DocumentType.class );
   }
 
 }

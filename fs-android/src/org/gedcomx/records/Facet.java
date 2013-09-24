@@ -17,6 +17,7 @@ package org.gedcomx.records;
 
 import org.gedcomx.common.URI;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.FacetType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
@@ -72,7 +73,7 @@ public class Facet extends HypermediaEnabledData
    * @param type The type of the facet.
    */
   public void setKnownType( FacetType type ) {
-//    setType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
   /**

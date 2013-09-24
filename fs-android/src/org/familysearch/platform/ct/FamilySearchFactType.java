@@ -1,6 +1,7 @@
 package org.familysearch.platform.ct;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of FamilySearch-specific fact types.
@@ -47,7 +48,7 @@ public enum FamilySearchFactType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // org.gedcomx.common.URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return org.gedcomx.common.URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -57,7 +58,7 @@ public enum FamilySearchFactType
    * @return The enumeration.
    */
   public static FamilySearchFactType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), FamilySearchFactType.class);
+    return EnumUtil.fromURIValue( qname.toString(), FamilySearchFactType.class );
   }
 
 }

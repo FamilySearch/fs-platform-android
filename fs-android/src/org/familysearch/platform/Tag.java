@@ -1,6 +1,7 @@
 package org.familysearch.platform;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -20,7 +21,7 @@ public class Tag implements Serializable
   }
 
   public Tag( Enum value ) {
-//    this.resource = URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(value));
+    this.resource = URI.create( EnumUtil.toURIValue( value ));
   }
 
   /**

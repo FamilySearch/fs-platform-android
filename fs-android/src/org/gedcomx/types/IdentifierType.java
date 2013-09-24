@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of standard identifier types.
@@ -68,7 +69,7 @@ public enum IdentifierType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -78,7 +79,7 @@ public enum IdentifierType
    * @return The enumeration.
    */
   public static IdentifierType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), IdentifierType.class);
+    return EnumUtil.fromURIValue( qname.toString(), IdentifierType.class );
   }
 
 }

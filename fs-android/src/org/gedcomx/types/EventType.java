@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of standard event types.
@@ -208,7 +209,7 @@ public enum EventType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -218,7 +219,7 @@ public enum EventType
    * @return The enumeration.
    */
   public static EventType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), EventType.class);
+    return EnumUtil.fromURIValue( qname.toString(), EventType.class );
   }
 
 }

@@ -16,6 +16,7 @@
 package org.gedcomx.conclusion;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.IdentifierType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Text;
@@ -109,7 +110,7 @@ public final class Identifier
    * @param knownType The known identifier type.
    */
   public void setKnownType( IdentifierType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
 

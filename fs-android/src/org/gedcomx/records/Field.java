@@ -17,6 +17,7 @@ package org.gedcomx.records;
 
 import org.gedcomx.common.URI;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.FieldType;
 import org.simpleframework.xml.*;
 
@@ -69,7 +70,7 @@ public class Field extends HypermediaEnabledData
    * @param type The type of the field.
    */
   public void setKnownType( FieldType type ) {
-//    setType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
 

@@ -18,6 +18,7 @@ package org.gedcomx.conclusion;
 import org.gedcomx.common.EvidenceReference;
 import org.gedcomx.common.URI;
 import org.gedcomx.records.HasFieldBasedEvidence;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.GenderType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
@@ -87,7 +88,7 @@ public class Gender extends Conclusion implements HasFieldBasedEvidence
    * @param type The type of the gender.
    */
   public void setKnownType( GenderType type ) {
-//    setType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
   /**

@@ -267,4 +267,27 @@ public class Person extends Subject implements HasFacts
     this.display = display;
   }
 
+  public String getGenderString() {
+    if (display != null) {
+      return display.getGender();
+    }
+    return gender == null ? null : gender.getKnownType().toString();
+  }
+
+  public String getLifespan() {
+    if (display != null) {
+      return display.getLifespan();
+    }
+    return null;
+  }
+
+  public String getFullName() {
+    if (display != null) {
+      return display.getName();
+    }
+    if (names != null && names.size() > 0 && names.get( 0 ).getNameForms() != null && names.get( 0 ).getNameForms().size() > 0) {
+      return names.get( 0 ).getNameForms().get( 0 ).getFullText();
+    }
+    return null;
+  }
 }

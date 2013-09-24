@@ -1,6 +1,7 @@
 package org.familysearch.platform.ct;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of relationship roles in the FamilySearch Family Tree.
@@ -34,7 +35,7 @@ public enum RelationshipRole
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -44,7 +45,7 @@ public enum RelationshipRole
    * @return The enumeration.
    */
   public static RelationshipRole fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), RelationshipRole.class);
+    return EnumUtil.fromURIValue( qname.toString(), RelationshipRole.class );
   }
 
 

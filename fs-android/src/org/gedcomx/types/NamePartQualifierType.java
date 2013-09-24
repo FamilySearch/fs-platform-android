@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 
 /**
@@ -119,7 +120,7 @@ public enum NamePartQualifierType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -129,7 +130,7 @@ public enum NamePartQualifierType
    * @return The enumeration.
    */
   public static NamePartQualifierType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), NamePartQualifierType.class);
+    return EnumUtil.fromURIValue( qname.toString(), NamePartQualifierType.class );
   }
 
 }

@@ -16,6 +16,7 @@
 package org.gedcomx.conclusion;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.EventType;
 import org.simpleframework.xml.*;
 
@@ -102,7 +103,7 @@ public class Event extends Subject implements HasDateAndPlace
    * @param knownType the event type.
    */
   public void setKnownType( org.gedcomx.types.EventType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

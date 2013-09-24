@@ -19,6 +19,7 @@ import org.gedcomx.common.URI;
 import org.gedcomx.conclusion.Date;
 import org.gedcomx.conclusion.PlaceReference;
 import org.gedcomx.links.HypermediaEnabledData;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.RecordType;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
@@ -108,7 +109,7 @@ public class Coverage extends HypermediaEnabledData
    * @param type The type of record being covered in this collection, if any.
    */
   public void setKnownRecordType( RecordType type ) {
-//    setRecordType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setRecordType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
 }

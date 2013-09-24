@@ -19,6 +19,7 @@ import org.gedcomx.common.EvidenceReference;
 import org.gedcomx.common.ResourceReference;
 import org.gedcomx.common.URI;
 import org.gedcomx.records.HasFieldBasedEvidence;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.RelationshipType;
 import org.simpleframework.xml.*;
 
@@ -80,7 +81,7 @@ public class Relationship extends Subject implements HasFacts, HasFieldBasedEvid
    * @param type The relationship type.
    */
   public void setKnownType( RelationshipType type ) {
-//    setType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
   /**

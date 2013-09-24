@@ -20,6 +20,7 @@ import org.gedcomx.common.ExtensibleData;
 import org.gedcomx.common.Qualifier;
 import org.gedcomx.common.URI;
 import org.gedcomx.records.HasFieldBasedEvidence;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.NamePartType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
@@ -78,7 +79,7 @@ public final class NamePart extends ExtensibleData implements HasFieldBasedEvide
    * @param knownType The name part type.
    */
   public void setKnownType( NamePartType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

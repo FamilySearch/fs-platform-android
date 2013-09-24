@@ -19,6 +19,7 @@ import org.gedcomx.common.EvidenceReference;
 import org.gedcomx.common.Qualifier;
 import org.gedcomx.common.URI;
 import org.gedcomx.records.HasFieldBasedEvidence;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.FactType;
 import org.simpleframework.xml.*;
 
@@ -112,7 +113,7 @@ public class Fact extends Conclusion implements HasDateAndPlace, HasFieldBasedEv
    * @param knownType the fact type.
    */
   public void setKnownType( org.gedcomx.types.FactType knownType ) {
-//    setType(knownType == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(knownType)));
+    setType(knownType == null ? null : URI.create( EnumUtil.toURIValue( knownType )));
   }
 
   /**

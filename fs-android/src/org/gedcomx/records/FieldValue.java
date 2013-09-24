@@ -18,6 +18,7 @@ package org.gedcomx.records;
 import org.gedcomx.common.EvidenceReference;
 import org.gedcomx.common.URI;
 import org.gedcomx.conclusion.Conclusion;
+import org.gedcomx.rt.EnumUtil;
 import org.gedcomx.types.FieldValueType;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -86,7 +87,7 @@ public final class FieldValue extends Conclusion implements HasFieldBasedEvidenc
    * @param type The type of the field value.
    */
   public void setKnownType( FieldValueType type ) {
-//    setType(type == null ? null : URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(type)));
+    setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
 

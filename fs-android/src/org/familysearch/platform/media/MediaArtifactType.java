@@ -13,48 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.gedcomx.types;
+package org.familysearch.platform.media;
 
 import org.gedcomx.common.URI;
 import org.gedcomx.rt.EnumUtil;
 
+
 /**
- * Enumeration of high-level genealogical resource types.
+ * Enumeration of known media artifact types.
+ *
+ * @author Ryan Heaton
  */
-/*
-@XmlQNameEnum (
-  base = XmlQNameEnum.BaseType.URI
-)
-*/
-public enum ResourceType
-{
+public enum MediaArtifactType {
 
   /**
-   * A historical record.
+   * The media artifact is a photo.
    */
-  Record,
+  Photo,
 
   /**
-   * A collection.
+   * The media artifact is a portrait.
    */
-  Collection,
+  Portrait,
 
   /**
-   * A digital artifact, such as a digital image or video.
+   * The media artifact is a story.
    */
-  DigitalArtifact,
+  Story,
 
   /**
-   * A physical artifact.
+   * Custom
    */
-  PhysicalArtifact,
-
-  /**
-   * A person.
-   */
-  Person,
-
-  //  @XmlUnknownQNameEnumValue
   OTHER;
 
   /**
@@ -63,7 +52,7 @@ public enum ResourceType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return URI.create( EnumUtil.toURIValue( this ));
+    return URI.create( EnumUtil.toURIValue( this ) );
   }
 
   /**
@@ -72,8 +61,8 @@ public enum ResourceType
    * @param qname The qname.
    * @return The enumeration.
    */
-  public static ResourceType fromQNameURI( URI qname ) {
-    return EnumUtil.fromURIValue( qname.toString(), ResourceType.class );
+  public static MediaArtifactType fromQNameURI(URI qname) {
+    return EnumUtil.fromURIValue( qname.toString(), MediaArtifactType.class );
   }
 
 }

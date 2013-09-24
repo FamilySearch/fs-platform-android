@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of known record types.
@@ -232,7 +233,7 @@ public enum RecordType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -242,7 +243,7 @@ public enum RecordType
    * @return The enumeration.
    */
   public static RecordType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), RecordType.class);
+    return EnumUtil.fromURIValue( qname.toString(), RecordType.class );
   }
 
 }

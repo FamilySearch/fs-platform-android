@@ -15,6 +15,7 @@
  */
 package org.gedcomx.common;
 
+import org.gedcomx.rt.EnumUtil;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Text;
 
@@ -80,7 +81,7 @@ public final class Qualifier
    * @return The vocabulary element.
    */
   public <E extends Enum> E getName( Class<E> vocabulary ) {
-    return null; // this.name == null ? null : (E) XmlQNameEnumUtil.fromURI(this.name.toURI(), vocabulary);
+    return this.name == null ? null : (E) EnumUtil.fromURI( this.name.toURI(), vocabulary );
   }
 
   /**
@@ -88,9 +89,9 @@ public final class Qualifier
    *
    * @param element The element.
    */
-//    public void setName( Enum element ) {
-//    this.name = element == null ? null : new URI(XmlQNameEnumUtil.toURI(element).toString());
-//}
+    public void setName( Enum element ) {
+      this.name = element == null ? null : new URI( EnumUtil.toURI( element ).toString());
+    }
 
   /**
    * The value of the qualifier. Some qualifiers may not have values, indicating that the qualifier is to be treated more like a "tag".

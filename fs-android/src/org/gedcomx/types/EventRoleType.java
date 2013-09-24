@@ -16,6 +16,7 @@
 package org.gedcomx.types;
 
 import org.gedcomx.common.URI;
+import org.gedcomx.rt.EnumUtil;
 
 /**
  * Enumeration of standard event roles.
@@ -41,7 +42,7 @@ public enum EventRoleType
    * @return The QName value for this enum.
    */
   public URI toQNameURI() {
-    return null; // URI.create(org.codehaus.enunciate.XmlQNameEnumUtil.toURIValue(this));
+    return URI.create( EnumUtil.toURIValue( this ));
   }
 
   /**
@@ -51,7 +52,7 @@ public enum EventRoleType
    * @return The enumeration.
    */
   public static EventRoleType fromQNameURI( URI qname ) {
-    return null; // org.codehaus.enunciate.XmlQNameEnumUtil.fromURIValue(qname.toString(), EventRoleType.class);
+    return EnumUtil.fromURIValue( qname.toString(), EventRoleType.class );
   }
 
 }
