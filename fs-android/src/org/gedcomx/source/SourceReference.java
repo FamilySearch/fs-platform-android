@@ -25,6 +25,7 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -96,5 +97,12 @@ public class SourceReference extends HypermediaEnabledData implements Attributab
    */
   public void setQualifiers( List<Qualifier> qualifiers ) {
     this.qualifiers = qualifiers;
+  }
+
+  public void addQualifier(Qualifier qualifier) {
+    if (qualifiers == null) {
+      qualifiers = new ArrayList<Qualifier>();
+    }
+    qualifiers.add( qualifier );
   }
 }
