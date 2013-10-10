@@ -1,5 +1,6 @@
 package org.familysearch.android.volley;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import org.simpleframework.xml.Serializer;
@@ -18,6 +19,7 @@ public class RestRequest<T>
   private String acceptType = "application/xml";
   private String contentType = null;
   private Serializer xmlSerializer = null;
+  private int timeout = -1;
 
   public RestRequest( Class<T> cls ) {
     this.cls = cls;
@@ -83,9 +85,15 @@ public class RestRequest<T>
         if (!isFirst)
           s.append( "&" );
         s.append( param.getKey() ).append( "=" ).append( param.getValue() );
+        isFirst = false;
       }
     }
     return s.toString();
+  }
+
+  public RestRequest timeout( int msTimeout ) {
+    timeout = msTimeout;
+    return this;
   }
 
   public XmlRequest<T> get( Response.Listener<T> listener, Response.ErrorListener errorListener ) {
@@ -95,6 +103,8 @@ public class RestRequest<T>
     XmlRequest<T> xmlRequest = new XmlRequest<T>( Request.Method.GET, getUrl(), cls, headers, listener, errorListener );
     if (xmlSerializer != null)
       xmlRequest.setSerializer( xmlSerializer );
+    if (timeout > 0)
+      xmlRequest.setRetryPolicy( new DefaultRetryPolicy( timeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT ) );
     return xmlRequest;
   }
 

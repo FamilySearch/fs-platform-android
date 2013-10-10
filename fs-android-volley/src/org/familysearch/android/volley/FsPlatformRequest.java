@@ -66,6 +66,12 @@ public class FsPlatformRequest extends RestRequest<FamilySearchPlatform>
   }
 
   @Override
+  public FsPlatformRequest timeout( int msTimeout ) {
+    super.timeout( msTimeout );
+    return this;
+  }
+
+  @Override
   public XmlRequest<FamilySearchPlatform> get( Response.Listener<FamilySearchPlatform> listener, Response.ErrorListener errorListener ) {
     return super.get( listener, errorListener );
   }

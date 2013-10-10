@@ -66,6 +66,12 @@ public class GedcomxRequest extends RestRequest<Gedcomx>
   }
 
   @Override
+  public GedcomxRequest timeout( int msTimeout ) {
+    super.timeout( msTimeout );
+    return this;
+  }
+
+  @Override
   public XmlRequest<Gedcomx> get( Response.Listener<Gedcomx> listener, Response.ErrorListener errorListener ) {
     return super.get( listener, errorListener );
   }
