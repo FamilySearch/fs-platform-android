@@ -1,6 +1,5 @@
 package org.familysearch.android.volley;
 
-import android.util.Log;
 import com.android.volley.*;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
@@ -89,7 +88,6 @@ public class XmlRequest<T> extends Request<T>
       return Response.success( serializer.read( cls, data ), HttpHeaderParser.parseCacheHeaders( response ) );
     }
     catch (Exception e) {
-      Log.e( "XmlRequest", "error", e );
       return Response.error( new ParseError( e ) );
     }
   }
