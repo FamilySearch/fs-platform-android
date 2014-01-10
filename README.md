@@ -15,9 +15,7 @@ Simple XML is used to serialize/deserialize the xml representation of the Gedcom
 Build
 -----
 
-The maven pom files are not yet operational. 
+The main way to build this is using gradle and/or Android Studio.
 
-The only way to use this is to add the fs-android directory as an Android library project inside Eclipse or Intellij.
-
-For intellij users, you can copy the *.iml.intellij files to *.iml so you can easily import the module into an existing intellij project. We do not want to add the .iml to git so each developer can use their own intellij settings.
+For intellij users, you can copy the *.iml.intellij files to *.iml so you can easily import the module into an existing intellij project. We do not want to add the .iml to git so each developer can use their own intellij settings. Though moving to Android Studio and using gradle is the preferred way.
 
