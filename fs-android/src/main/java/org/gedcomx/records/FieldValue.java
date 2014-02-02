@@ -24,6 +24,7 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -31,21 +32,21 @@ import java.util.List;
  * An element representing a value in a record field.
  */
 //@XmlType (name = "FieldValue")
-public final class FieldValue extends Conclusion implements HasFieldBasedEvidence
+public final class FieldValue extends Conclusion
 {
   /**
    * @see FieldValueType
    */
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from FieldValueType
   @Element
   private String text;
-  @Element (required = false)
+  @Attribute (required = false)
   private URI datatype;
-  @Attribute
+  @Attribute (required = false)
   private URI resource;
-  @ElementList (entry = "fieldValue", inline = true, required = false)
-  private List<EvidenceReference> fieldValueReferences;
+  @Attribute (required = false)
+  private String labelId;
 
   public FieldValue() {
   }
@@ -90,6 +91,23 @@ public final class FieldValue extends Conclusion implements HasFieldBasedEvidenc
     setType(type == null ? null : URI.create( EnumUtil.toURIValue( type )));
   }
 
+  /**
+   * The id of the label applicable to this field value.
+   *
+   * @return The id of the label applicable to this field value.
+   */
+  public String getLabelId() {
+    return labelId;
+  }
+
+  /**
+   * The id of the label applicable to this field value.
+   *
+   * @param labelId The id of the label applicable to this field value.
+   */
+  public void setLabelId(String labelId) {
+    this.labelId = labelId;
+  }
 
   /**
    * The text value.
@@ -145,24 +163,4 @@ public final class FieldValue extends Conclusion implements HasFieldBasedEvidenc
   public void setResource( URI resource ) {
     this.resource = resource;
   }
-
-  /**
-   * The references to the record field values being used as evidence.
-   *
-   * @return The references to the record field values being used as evidence.
-   */
-  public List<EvidenceReference> getFieldValueReferences() {
-    return fieldValueReferences;
-  }
-
-  /**
-   * The references to the record field values being used as evidence.
-   *
-   * @param fieldValueReferences The references to the record field values being used as evidence.
-   */
-  public void setFieldValueReferences( List<EvidenceReference> fieldValueReferences ) {
-    this.fieldValueReferences = fieldValueReferences;
-  }
-
-
 }

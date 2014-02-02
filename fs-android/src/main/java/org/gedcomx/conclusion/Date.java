@@ -18,7 +18,8 @@ package org.gedcomx.conclusion;
 import org.gedcomx.common.EvidenceReference;
 import org.gedcomx.common.ExtensibleData;
 import org.gedcomx.common.TextValue;
-import org.gedcomx.records.HasFieldBasedEvidence;
+import org.gedcomx.records.Field;
+import org.gedcomx.records.HasFields;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Order;
@@ -32,8 +33,8 @@ import java.util.List;
  */
 @Root (strict = false)
 //@ClientName ("DateInfo")
-@Order (elements = {"original", "formal", "normalized", "fieldValue"})
-public class Date extends ExtensibleData implements HasFieldBasedEvidence
+@Order (elements = {"original", "formal", "normalized", "field"})
+public class Date extends ExtensibleData implements HasFields
 {
 
   @Element (required = false)
@@ -42,8 +43,8 @@ public class Date extends ExtensibleData implements HasFieldBasedEvidence
   private String formal;
   @ElementList (entry = "normalized", inline = true, required = false)
   private List<TextValue> normalized;
-  @ElementList (entry = "fieldValue", inline = true, required = false)
-  private List<EvidenceReference> fieldValueReferences;
+  @ElementList (entry = "field", inline = true, required = false)
+  private List<Field> fields;
 
   /**
    * The original text as supplied by the user.
@@ -118,34 +119,32 @@ public class Date extends ExtensibleData implements HasFieldBasedEvidence
   }
 
   /**
-   * The references to the record field values being used as evidence.
+   * Get the fields being used as evidence.
    *
-   * @return The references to the record field values being used as evidence.
+   * @return The record fields being used as evidence.
    */
-  public List<EvidenceReference> getFieldValueReferences() {
-    return fieldValueReferences;
+  public List<Field> getFields() { return fields;  }
+
+  /**
+   * Set the list of fields being used as evidence.
+   *
+   * @param fields - List of fields
+   */
+  public void setFields( List<Field> fields ) {
+    this.fields = fields;
   }
 
   /**
-   * The references to the record field values being used as evidence.
+   * Add a field to the record fields being used as evidence.
    *
-   * @param fieldValueReferences The references to the record field values being used as evidence.
+   * @param field The field to be added.
    */
-  public void setFieldValueReferences( List<EvidenceReference> fieldValueReferences ) {
-    this.fieldValueReferences = fieldValueReferences;
-  }
-
-  /**
-   * Add a reference to the record field values being used as evidence.
-   *
-   * @param fieldValueRef The evidence to be added.
-   */
-  public void addFieldValueReference( EvidenceReference fieldValueRef ) {
-    if (fieldValueRef != null) {
-      if (fieldValueReferences == null) {
-        fieldValueReferences = new LinkedList<EvidenceReference>();
+  public void addField( Field field ) {
+    if (field != null) {
+      if (fields == null) {
+        fields = new LinkedList<Field>();
       }
-      fieldValueReferences.add( fieldValueRef );
+      fields.add( field );
     }
   }
 

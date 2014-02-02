@@ -15,14 +15,12 @@
  */
 package org.gedcomx.records;
 
-import org.gedcomx.common.EvidenceReference;
-
 import java.util.List;
 
 /**
  * @author Reed Ellsworth
  */
-public interface HasFieldBasedEvidence
+public interface HasFields
 {
 
   /**
@@ -30,13 +28,13 @@ public interface HasFieldBasedEvidence
    *
    * @return The references to the record field values being used as evidence.
    */
-  List<EvidenceReference> getFieldValueReferences();
+  List<Field> getFields();
 
   /**
    * The references to the record field values being used as evidence.
    *
-   * @param fieldValueReferences The references to the record field values being used as evidence.
+   * @param fields The references to the record field values being used as evidence.
    */
-  void setFieldValueReferences( List<EvidenceReference> fieldValueReferences );
+  void setFields( List<Field> fields );
 
 }

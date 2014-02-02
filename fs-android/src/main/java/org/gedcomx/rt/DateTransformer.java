@@ -33,7 +33,7 @@ public class DateTransformer implements Transform<Date>
     DateFormat format = dateTimeFormatShort2;
     ParsePosition pos = new ParsePosition( 0 );
     int len = str.length();
-    for (int i = 0; i < 38; i++) {
+    for (int i = 0; i < 39; i++) {
       switch (i) {
         case 0:
           format = dateTimeFormatShort1;
@@ -57,23 +57,21 @@ public class DateTransformer implements Transform<Date>
           format = gdxFormat;
           break;
         case 7:
-          format = gdxFormat2;
+          format = gdxFormat1;
           break;
         case 8:
-          format = dateTimeFormatMed1;
+          format = gdxFormat2;
           break;
         case 9:
-          format = dateTimeFormatMed2;
+          format = dateTimeFormatMed1;
           break;
         case 10:
-          format = dateTimeFormatMed3;
+          format = dateTimeFormatMed2;
           break;
         case 11:
-          format = toStringFormat1;
+          format = dateTimeFormatMed3;
           break;
-        case 12:
-          format = toStringFormat2;
-          break;
+
         case 13:
           format = dateTimeFormatLong1;
           break;
@@ -149,6 +147,13 @@ public class DateTransformer implements Transform<Date>
         case 37:
           format = dateFormat8;
           break;
+
+        case 12:
+          format = toStringFormat1;
+          break;
+        case 38:
+          format = toStringFormat2;
+          break;
       }
       // System.out.println("parsing with (" + i + ") " + ((SimpleDateFormat)format).toPattern() + ": " + str );
       pos.setIndex( 0 );
@@ -211,6 +216,7 @@ public class DateTransformer implements Transform<Date>
   private static DateFormat dateFormat7 = new SimpleDateFormat( "d MMM yy" );
   private static DateFormat dateFormat8 = new SimpleDateFormat( "d.MMM.yy" );
   private static DateFormat gdxFormat = new SimpleDateFormat( "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" ); //"2013-02-27T17:24:10.866Z"
+  private static DateFormat gdxFormat1 = new SimpleDateFormat( "yyyy-MM-dd'T'HH:mm:ss'Z'" ); //"2013-02-27T17:24:10Z"
   private static DateFormat gdxFormat2 = new SimpleDateFormat( "+yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" ); //"2013-02-27T17:24:10.866Z"
 
   private static DateFormat outputDateFormat = DateFormat.getDateInstance( DateFormat.SHORT );
