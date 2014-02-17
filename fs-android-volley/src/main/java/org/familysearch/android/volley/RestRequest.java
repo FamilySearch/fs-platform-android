@@ -37,12 +37,12 @@ public class RestRequest<T>
     this.xmlSerializer = xmlSerializer;
   }
 
-  public RestRequest path( String path ) {
+  public RestRequest<T> path( String path ) {
     this.path = path;
     return this;
   }
 
-  public RestRequest header( String name, String value ) {
+  public RestRequest<T> header( String name, String value ) {
     if (headers == null) {
       headers = new HashMap<String, String>();
     }
@@ -50,7 +50,7 @@ public class RestRequest<T>
     return this;
   }
 
-  public RestRequest queryParam( String name, String value ) {
+  public RestRequest<T> queryParam( String name, String value ) {
     if (queryParams == null) {
       queryParams = new HashMap<String, String>();
     }
@@ -58,11 +58,11 @@ public class RestRequest<T>
     return this;
   }
 
-  public RestRequest session( String sessionId ) {
+  public RestRequest<T> session( String sessionId ) {
     return header( "Authorization", "Bearer " + sessionId );
   }
 
-  public RestRequest accept( String... acceptTypes ) {
+  public RestRequest<T> accept( String... acceptTypes ) {
     StringBuilder acceptType = new StringBuilder();
     for (String type : acceptTypes) {
       if (acceptType.length() > 0)
@@ -72,7 +72,7 @@ public class RestRequest<T>
     return header( "Accept", acceptType.toString() );
   }
 
-  public RestRequest type( String contentType ) {
+  public RestRequest<T> type( String contentType ) {
     return header( "Content-Type", contentType );
   }
 
@@ -91,13 +91,13 @@ public class RestRequest<T>
     return s.toString();
   }
 
-  public RestRequest timeout( int msTimeout ) {
+  public RestRequest<T> timeout( int msTimeout ) {
     timeout = msTimeout;
     return this;
   }
 
   public XmlRequest<T> get( Response.Listener<T> listener, Response.ErrorListener errorListener ) {
-    if (acceptType != null && (headers == null || !headers.containsValue( "Accept" ))) {
+    if (acceptType != null && (headers == null || !headers.containsKey( "Accept" ))) {
       header( "Accept", acceptType );
     }
     XmlRequest<T> xmlRequest = new XmlRequest<T>( Request.Method.GET, getUrl(), cls, headers, listener, errorListener );
@@ -109,7 +109,7 @@ public class RestRequest<T>
   }
 
   public XmlRequest<T> post( T body, Response.Listener<T> listener, Response.ErrorListener errorListener ) {
-    if (contentType != null && (headers == null || !headers.containsValue( "Content-Type" ))) {
+    if (contentType != null && (headers == null || !headers.containsKey( "Content-Type" ))) {
       header( "Content-Type", contentType );
     }
     XmlRequest<T> xmlRequest = new XmlRequest<T>( Request.Method.POST, getUrl(), cls, headers, listener, errorListener );
