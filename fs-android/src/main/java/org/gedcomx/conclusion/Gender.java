@@ -36,7 +36,7 @@ import java.util.List;
 @Root ( strict = false )
 public class Gender extends Conclusion implements HasFields
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from GenderType
   @ElementList (entry = "field", inline = true, required = false)
   private List<Field> fields;

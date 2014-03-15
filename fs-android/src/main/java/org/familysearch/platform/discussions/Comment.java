@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  */
-@Root
+@Root (strict = false)
 @Order (elements = {"text", "created", "contributor"})
 @SuppressWarnings ("gedcomx:no_id")
 public class Comment extends HypermediaEnabledData

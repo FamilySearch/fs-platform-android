@@ -31,7 +31,7 @@ import java.util.List;
 @Order (elements = {"title", "key", "facets", "values"})
 public class Facet extends HypermediaEnabledData
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from FacetType
   private String title;
   private String key;

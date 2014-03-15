@@ -22,9 +22,9 @@ public class MergeAnalysis
   private List<ResourceReference> duplicateResources;
   @ElementList (entry = "conflictingResource", inline = true, required = false)
   private List<MergeConflict> conflictingResources;
-  @Element (name = "survivor")
+  @Element (name = "survivor", required = false)
   private ResourceReference survivor;
-  @Element (name = "duplicate")
+  @Element (name = "duplicate", required = false)
   private ResourceReference duplicate;
 
   public List<ResourceReference> getSurvivorResources() {

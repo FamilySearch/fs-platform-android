@@ -14,7 +14,7 @@ import org.simpleframework.xml.Root;
 public final class DiscussionReference extends HypermediaEnabledData
 {
 
-  @Attribute
+  @Attribute (required = false)
   private URI resource;
 
   public DiscussionReference() {

@@ -29,7 +29,7 @@ import org.simpleframework.xml.Namespace;
 public final class Content
 {
 
-  @Attribute
+  @Attribute (required = false)
   private String type = GedcomxConstants.GEDCOMX_XML_MEDIA_TYPE;
   @Element (required = false) //( name = "gedcomx", namespace = GedcomxConstants.GEDCOMX_NAMESPACE )
   @Namespace (reference = GedcomxConstants.GEDCOMX_NAMESPACE)

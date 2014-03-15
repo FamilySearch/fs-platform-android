@@ -38,9 +38,9 @@ import java.util.List;
 //@XmlType ( name = "NamePart" )
 public final class NamePart extends ExtensibleData implements HasFields
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from NamePartType
-  @Attribute
+  @Attribute (required = false)
   private String value;
   @ElementList (entry = "qualifier", inline = true, required = false)
   private List<Qualifier> qualifiers;

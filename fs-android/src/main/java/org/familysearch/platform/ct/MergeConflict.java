@@ -12,9 +12,9 @@ import org.simpleframework.xml.Root;
 @Order (elements = {"survivorResource", "duplicateResource"})
 public class MergeConflict
 {
-  @Element (name = "survivorResource")
+  @Element (name = "survivorResource", required = false)
   private ResourceReference survivorResource;
-  @Element (name = "duplicateResource")
+  @Element (name = "duplicateResource", required = false)
   private ResourceReference duplicateResource;
 
   public MergeConflict() {

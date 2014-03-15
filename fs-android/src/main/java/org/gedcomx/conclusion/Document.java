@@ -38,7 +38,7 @@ public class Document extends Conclusion implements HasText, Attributable
 
   @Attribute (required = false)
   private Boolean extracted;
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from DocumentType
   @Attribute (required = false)
   private String textType;

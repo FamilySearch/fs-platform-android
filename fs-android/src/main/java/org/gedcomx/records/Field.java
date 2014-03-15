@@ -30,9 +30,9 @@ import java.util.List;
 @Order (elements = {"label", "values"})
 public class Field extends HypermediaEnabledData
 {
-  @Element
+  @Element (required = false)
   private String label;
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from FieldType
   @ElementList (entry = "value")
   private List<FieldValue> values;

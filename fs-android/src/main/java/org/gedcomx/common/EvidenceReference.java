@@ -29,9 +29,9 @@ import org.simpleframework.xml.Root;
 public final class EvidenceReference extends HypermediaEnabledData implements Attributable
 {
 
-  @Attribute
+  @Attribute (required = false)
   private URI resource;
-  @Attribute
+  @Attribute (required = false)
   private String resourceId;
   @Element (required = false)
   private Attribution attribution;

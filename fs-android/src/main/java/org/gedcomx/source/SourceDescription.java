@@ -40,7 +40,7 @@ public class SourceDescription extends HypermediaEnabledData implements Attribut
   private List<SourceCitation> citations;
   @Attribute (required = false)
   private String mediaType;
-  @Attribute
+  @Attribute (required = false)
   private URI about;
   @Element (required = false)
   private ResourceReference mediator;

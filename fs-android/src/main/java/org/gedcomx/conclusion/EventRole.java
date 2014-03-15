@@ -33,7 +33,7 @@ public class EventRole extends Conclusion
 {
   @Element (required = false)
   private ResourceReference person;
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from EventRoleType
   @Element (required = false)
   private String details;

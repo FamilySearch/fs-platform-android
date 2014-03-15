@@ -48,7 +48,6 @@ public class ChangeInfo
    *
    * @return The operation of the change.
    */
-  @Attribute
   public URI getOperation() {
     return operation;
   }

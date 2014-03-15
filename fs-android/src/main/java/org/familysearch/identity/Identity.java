@@ -12,16 +12,16 @@ import org.simpleframework.xml.Root;
 @Root (strict = false)
 public class Identity
 {
-  @Attribute
+  @Attribute (required = false)
   public Integer statusCode;
 
-  @Attribute
+  @Attribute (required = false)
   public String statusMessage;
 
-  @Attribute
+  @Attribute (required = false)
   public String version;
 
-  @Element
+  @Element (required = false)
   private Session session;
 
   public Session getSession() {

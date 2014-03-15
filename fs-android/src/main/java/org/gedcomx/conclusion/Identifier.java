@@ -31,9 +31,9 @@ import org.simpleframework.xml.Text;
 public final class Identifier
 {
   private transient boolean hasUniqueKey = false;
-  @Text
+  @Text (required = false)
   private URI value;
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from IdentifierType
 
   public Identifier() {

@@ -27,9 +27,9 @@ import org.simpleframework.xml.Text;
 public class CitationField
 {
 
-  @Attribute
+  @Attribute (required = false)
   private URI name;
-  @Text
+  @Text (required = false)
   private String value;
 
   public CitationField() {

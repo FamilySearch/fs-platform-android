@@ -16,7 +16,7 @@ public class MediaMetadata {
 
   @Element (required = false)
   private String filename;
-  @Attribute
+  @Attribute (required = false)
   private URI artifactType;
 
   /**

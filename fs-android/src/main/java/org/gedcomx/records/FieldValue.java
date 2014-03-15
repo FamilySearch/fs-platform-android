@@ -39,7 +39,7 @@ public final class FieldValue extends Conclusion
    */
   @Attribute (required = false)
   private URI type; // from FieldValueType
-  @Element
+  @Element (required = false)
   private String text;
   @Attribute (required = false)
   private URI datatype;
@@ -132,7 +132,6 @@ public final class FieldValue extends Conclusion
    *
    * @return The datatype of the text value of the field.
    */
-  @Attribute
   public URI getDatatype() {
     return datatype;
   }

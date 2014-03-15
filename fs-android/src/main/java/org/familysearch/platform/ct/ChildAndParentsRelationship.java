@@ -23,7 +23,7 @@ public class ChildAndParentsRelationship extends Subject
   private ResourceReference father;
   @Element (required = false)
   private ResourceReference mother;
-  @Element
+  @Element (required = false)
   private ResourceReference child;
   @ElementList (entry = "fatherFact", inline = true, required = false)
   private List<Fact> fatherFacts;

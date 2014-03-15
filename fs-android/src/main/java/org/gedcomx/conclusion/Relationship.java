@@ -38,7 +38,7 @@ import java.util.List;
 @Order (elements = {"person1", "person2", "fact", "field"})
 public class Relationship extends Subject implements HasFacts, HasFields
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from RelationshipType
   @Element (required = false)
   private ResourceReference person1;

@@ -32,11 +32,11 @@ public final class Generator
   private String lang;
   @Attribute (required = false)
   private URI base;
-  @Attribute
+  @Attribute (required = false)
   private URI uri;
   @Attribute (required = false)
   private String version;
-  @Text
+  @Text (required = false)
   private String value;
 
   /**

@@ -34,7 +34,7 @@ import java.util.List;
 @Root ( strict = false )
 public class Fact extends Conclusion implements HasDateAndPlace, HasFields
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from FactType
   @Element ( required = false )
   private Date date;

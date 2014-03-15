@@ -15,5 +15,5 @@ dependencies {
         exclude group: 'stax'
     }
     compile project(':fs:fs-android')
-    compile files('../../lib/volley.jar')
+    compile 'com.mcxiaoke.volley:library:1.0.+'
 }

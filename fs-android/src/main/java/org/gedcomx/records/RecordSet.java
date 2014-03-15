@@ -26,7 +26,8 @@ import java.util.List;
  *
  * @author Reed Ellsworth
  */
-@Root // (namespace = GedcomxConstants.GEDCOMX_BULK_RECORDS_NAMESPACE, name = "records" , strict=false)
+@Root (strict = false)
+// (namespace = GedcomxConstants.GEDCOMX_BULK_RECORDS_NAMESPACE, name = "records" , strict=false)
 @Order (elements = {"metadata", "records"})
 public class RecordSet extends HypermediaEnabledData
 {

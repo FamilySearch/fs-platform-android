@@ -33,7 +33,7 @@ import java.util.List;
 @Order (elements = {"date", "place", "role"})
 public class Event extends Subject implements HasDateAndPlace
 {
-  @Attribute
+  @Attribute (required = false)
   private URI type; // from org.gedcomx.types.EventType
   @Element (required = false)
   private Date date;

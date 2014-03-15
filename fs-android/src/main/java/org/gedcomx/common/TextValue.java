@@ -28,7 +28,7 @@ public class TextValue
 
   @Attribute (required = false)
   private String lang;
-  @Text
+  @Text (required = false)
   private String value;
 
   public TextValue() {

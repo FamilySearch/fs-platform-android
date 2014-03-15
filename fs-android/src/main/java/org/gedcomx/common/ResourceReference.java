@@ -27,9 +27,9 @@ import org.simpleframework.xml.Root;
 public final class ResourceReference
 {
 
-  @Attribute
+  @Attribute (required = false)
   private URI resource;
-  @Attribute
+  @Attribute (required = false)
   private String resourceId;
 
   public ResourceReference() {

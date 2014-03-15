@@ -28,9 +28,9 @@ import org.simpleframework.xml.Text;
 public final class Qualifier
 {
 
-  @Attribute
+  @Attribute (required = false)
   private URI name;
-  @Text
+  @Text (required = false)
   private String value;
 
   public Qualifier() {
