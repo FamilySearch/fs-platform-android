@@ -2,5 +2,8 @@
 *.iml
 *.iws
 .idea
-target
+build
 gen
+.gradle
+.DS_Store
+
