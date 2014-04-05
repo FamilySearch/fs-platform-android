@@ -37,7 +37,7 @@ public class SourceCitation extends HypermediaEnabledData
   private String value;
   @Element (required = false)
   private ResourceReference citationTemplate;
-  @ElementList (entry = "field", inline = true)
+  @ElementList (entry = "field", inline = true, required = false)
   private List<CitationField> fields;
 
   /**

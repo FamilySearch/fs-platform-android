@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 @Root (strict = false)
-@Order (elements = {"resourcesToDelete", "resourcesToCopy"})
+@Order (elements = {"resourceToDelete", "resourceToCopy"})
 public class Merge
 {
   @ElementList (entry = "resourceToDelete", inline = true, required = false)

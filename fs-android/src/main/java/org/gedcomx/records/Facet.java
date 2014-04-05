@@ -28,16 +28,16 @@ import java.util.List;
 /**
  * <p>A <tt>facet</tt> is a logical grouping of resources by specific criteria, used for convenience in browsing a collection or a set of search results.</p>
  */
-@Order (elements = {"title", "key", "facets", "values"})
+@Order (elements = {"title", "key", "facet", "value"})
 public class Facet extends HypermediaEnabledData
 {
   @Attribute (required = false)
   private URI type; // from FacetType
   private String title;
   private String key;
-  @ElementList (entry = "facet")
+  @ElementList (entry = "facet", required = false)
   private List<Facet> facets;
-  @ElementList (entry = "value")
+  @ElementList (entry = "value", required = false)
   private List<FacetValue> values;
 
   /**

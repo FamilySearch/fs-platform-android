@@ -28,7 +28,7 @@ import java.util.List;
  * @author Reed Ellsworth
  */
 @Root (strict = false)
-@Order (elements = {"title", "size", "content", "facets", "attribution"})
+@Order (elements = {"title", "size", "content", "facet", "attribution"})
 public class Collection extends HypermediaEnabledData implements Attributable
 {
 

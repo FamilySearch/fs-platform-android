@@ -37,7 +37,7 @@ public class Name extends Conclusion
   private URI type; // from NameType
   @Element ( required = false )
   private Date date;
-  @ElementList ( entry = "nameForm", inline = true )
+  @ElementList ( entry = "nameForm", inline = true, required = false )
   private List<NameForm> nameForms;
   @Element ( required = false )
   private Boolean preferred;

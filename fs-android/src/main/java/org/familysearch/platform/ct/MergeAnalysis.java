@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 @Root (strict = false)
-@Order (elements = {"survivorResources", "duplicateResources", "conflictingResources", "survivor", "duplicate"})
+@Order (elements = {"survivorResource", "duplicateResource", "conflictingResource", "survivor", "duplicate"})
 public class MergeAnalysis
 {
   @ElementList (entry = "survivorResource", inline = true, required = false)

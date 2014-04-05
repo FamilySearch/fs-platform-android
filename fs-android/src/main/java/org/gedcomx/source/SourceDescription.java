@@ -33,7 +33,7 @@ import java.util.List;
  * Represents a description of a source.
  */
 @Root (strict = false)
-@Order (elements = {"citations", "mediator", "sources", "analysis", "componentOf", "titles", "notes", "attribution", "sortKey", "description", "identifiers", "created", "modified", "coverage", "repository", "descriptorRef"})
+@Order (elements = {"citation", "mediator", "source", "analysis", "componentOf", "title", "note", "attribution", "sortKey", "description", "identifier", "created", "modified", "coverage", "repository", "descriptor"})
 public class SourceDescription extends HypermediaEnabledData implements Attributable, HasNotes, ReferencesSources
 {
   @ElementList (entry = "citation", inline = true, required = false)

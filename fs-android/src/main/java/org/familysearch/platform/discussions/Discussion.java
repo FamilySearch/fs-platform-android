@@ -30,7 +30,7 @@ import java.util.List;
  * A discussion.
  */
 @Root (strict = false)
-@Order (elements = {"title", "details", "created", "contributor", "modified", "numberOfComments", "comments"})
+@Order (elements = {"title", "details", "created", "contributor", "modified", "numberOfComments", "comment"})
 public class Discussion extends HypermediaEnabledData
 {
 

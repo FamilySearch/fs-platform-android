@@ -37,21 +37,21 @@ import java.util.List;
 public class Agent extends HypermediaEnabledData
 {
 
-  @ElementList (entry = "name", inline = true)
+  @ElementList (entry = "name", inline = true, required = false)
   private List<TextValue> names;
-  @ElementList (entry = "identifier", inline = true)
+  @ElementList (entry = "identifier", inline = true, required = false)
   private List<Identifier> identifiers;
   @Element (required = false)
   private ResourceReference homepage;
   @Element (required = false)
   private ResourceReference openid;
-  @ElementList (entry = "account", inline = true)
+  @ElementList (entry = "account", inline = true, required = false)
   private List<OnlineAccount> accounts;
-  @ElementList (entry = "email", inline = true)
+  @ElementList (entry = "email", inline = true, required = false)
   private List<ResourceReference> emails;
-  @ElementList (entry = "phone", inline = true)
+  @ElementList (entry = "phone", inline = true, required = false)
   private List<ResourceReference> phones;
-  @ElementList (entry = "address", inline = true)
+  @ElementList (entry = "address", inline = true, required = false)
   private List<Address> addresses;
 
   /**

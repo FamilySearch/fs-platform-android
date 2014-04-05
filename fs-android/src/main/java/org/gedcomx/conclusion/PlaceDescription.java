@@ -36,7 +36,7 @@ import java.util.List;
 public class PlaceDescription extends Subject
 {
 
-  @ElementList (entry = "name", inline = true)
+  @ElementList (entry = "name", inline = true, required = false)
   private List<TextValue> names;
   @Attribute (required = false)
   private URI type;

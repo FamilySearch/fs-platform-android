@@ -32,7 +32,7 @@ public class RecordDescriptor extends HypermediaEnabledData
 
   @Attribute (required = false)
   private String lang;
-  @ElementList (entry = "field")
+  @ElementList (entry = "field", required = false)
   private List<FieldDescriptor> fields;
 
   /**

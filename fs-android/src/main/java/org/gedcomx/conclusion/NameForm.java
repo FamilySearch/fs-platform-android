@@ -40,7 +40,7 @@ public class NameForm extends ExtensibleData implements HasFields
   private String lang;
   @Element (required = false)
   private String fullText;
-  @ElementList (entry = "part", inline = true)
+  @ElementList (entry = "part", inline = true, required = false)
   private List<NamePart> parts;
   @ElementList (entry = "field", inline = true, required = false)
   private List<Field> fields;

@@ -37,7 +37,7 @@ import java.util.List;
  *
  * @author Reed Ellsworth
  */
-@Order (elements = {"evidence", "media", "identifiers"})
+@Order (elements = {"evidence", "media", "identifier"})
 public abstract class Subject extends Conclusion implements Attributable
 {
 

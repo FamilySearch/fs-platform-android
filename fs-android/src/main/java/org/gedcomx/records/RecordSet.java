@@ -28,7 +28,7 @@ import java.util.List;
  */
 @Root (strict = false)
 // (namespace = GedcomxConstants.GEDCOMX_BULK_RECORDS_NAMESPACE, name = "records" , strict=false)
-@Order (elements = {"metadata", "records"})
+@Order (elements = {"metadata", "record"})
 public class RecordSet extends HypermediaEnabledData
 {
 
@@ -36,7 +36,7 @@ public class RecordSet extends HypermediaEnabledData
   private String lang;
   @Element (required = false)
   private Gedcomx metadata;
-  @ElementList (entry = "record")
+  @ElementList (entry = "record", required = false)
   private List<Gedcomx> records;
 
   /**

@@ -27,14 +27,14 @@ import java.util.List;
  * A field of a record.
  */
 @Root (strict = false)
-@Order (elements = {"label", "values"})
+@Order (elements = {"label", "value"})
 public class Field extends HypermediaEnabledData
 {
   @Element (required = false)
   private String label;
   @Attribute (required = false)
   private URI type; // from FieldType
-  @ElementList (entry = "value")
+  @ElementList (entry = "value", required = false)
   private List<FieldValue> values;
 
   /**
