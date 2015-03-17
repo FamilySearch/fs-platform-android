@@ -113,6 +113,14 @@ public class PlaceReference extends ExtensibleData implements HasFields
     }
   }
 
+  public List<TextValue> getNormalized() {
+      return normalized;
+  }
+
+  public void setNormalized(List<TextValue> normalized) {
+      this.normalized = normalized;
+  }
+  
   public String toString() {
     return "PlaceReference{" + "original='" + original + "', " + "descriptionRef='" + descriptionRef + '\'' + '}';
   }
