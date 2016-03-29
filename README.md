@@ -1,3 +1,12 @@
+This project has been deprecated in favor of [gedcomx-java](ttps://github.com/FamilySearch/gedcomx-java) 
+
+The use gedcomx-java in Android add the following dependency to your project:
+
+    compile ('org.gedcomx:gedcomx-model:1.0.158.M1') {
+        exclude module: 'woodstox-core'
+        exclude module: 'jaxb-impl'
+    }
+
 Welcome
 -------
 
@@ -12,10 +21,6 @@ GEDCOM X objects.
 Simple XML is used to serialize/deserialize the xml representation of the GedcomX and FamilySearch model objects.
 [See the Simple XML site](http://simple.sourceforge.net/) for more information using Simple XML. 
 
-Build
------
-
 The main way to build this is using gradle and/or Android Studio.
 
-For intellij users, you can copy the *.iml.intellij files to *.iml so you can easily import the module into an existing intellij project. We do not want to add the .iml to git so each developer can use their own intellij settings. Though moving to Android Studio and using gradle is the preferred way.
 
