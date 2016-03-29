@@ -1,4 +1,4 @@
-This project has been deprecated in favor of [gedcomx-java](ttps://github.com/FamilySearch/gedcomx-java) 
+This project has been deprecated in favor of [gedcomx-java](https://github.com/FamilySearch/gedcomx-java) 
 
 The use gedcomx-java in Android add the following dependency to your project:
 
